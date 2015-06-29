@@ -3,21 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bataillenavale;
+package charlesbataille;
 
 /**
  *
  * @author François
  */
-public class BatailleNavale {
+public class CharlesBataille {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.print("Salut");
+        Fenetre fen = new Fenetre();
     }
-    
-  
     
 }
