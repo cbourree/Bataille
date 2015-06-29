@@ -50,10 +50,10 @@ public class Bouton_credits extends JButton implements MouseListener{
         Graphics2D g2d = (Graphics2D)g;
         g2d.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
         GradientPaint gp = new GradientPaint(0, 0, Color.blue, 0, 20, Color.cyan, true);
-         g2d.setPaint(gp);
+        g2d.setPaint(gp);
     }
     
-      //Méthode appelée lors du clic de souris
+     //Méthode appelée lors du clic de souris
     public void mouseClicked(MouseEvent event) {
         System.out.print("Salut");
     }

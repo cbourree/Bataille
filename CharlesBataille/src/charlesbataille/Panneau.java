@@ -37,8 +37,6 @@ public class Panneau extends JPanel {
     Font font = new Font("Courier", Font.BOLD, 70);
     JLabel text = new JLabel();
     Font font_text = new Font("Courier", Font.BOLD, 20);
-    JLabel titre = new JLabel();
-    Font font_titre = new Font("Courier", Font.BOLD, 50);
     
     @Override
     public void paintComponent(Graphics g){
@@ -67,16 +65,22 @@ public class Panneau extends JPanel {
         pan_menu.setBackground(new Color(0,true));
         
         text.setForeground(new Color(255,255, 255));
-        text.setText("Bienvenue sur Bataille Navale Online\n");
-        text.setText("Ici un petit message de règle ou ...");
+        text.setText("<html><h1 style=\"font-size:50px;margin-left:20px;\">Bienvenue</h1>"
+                + "<div style=\"text-align:justify;margin:20px;\"><span style=\"background-color:red;margin-top:100px;\">Bienvenue</span>sur Bataille Navale Online<br />"
+                + "ici beaucoup de texte pour voire ce que ça donne... osder+ \"ici beaucoup de texte pour"
+                + " voire ce que ça donne... osder+ \"ici beaucoup de texte pour voire ce que ça donne... osder+ "
+                + "+ \"ici beaucoup de texte pour voire ce que ça donne... osder+ \"ici beaucoup de texte pour voire "
+                + "ce que ça donne... osder+ \"ici beaucoup de texte pour voire ce que ça donne... osder\"ici beaucoup"
+                + "+ \"ici beaucoup de texte pour voire ce que ça donne... osder"
+                + "+ \"ici beaucoup de texte pour voire ce que ça donne... osder"
+                + "+ \"ici beaucoup de texte pour voire ce que ça donne... osder de texte pour voire ce que ça donne... osder"
+                + "</div></html>");
         text.setFont(font_text);
-        text.setBounds(100, 0, 500, 500);       
-        pan_menu.add(text);
-        titre.setForeground(new Color(255,255, 255));
-        titre.setText("Bievenue");
-        titre.setFont(font_titre);
-        titre.setBounds(100, 100, 500, 40);       
-        pan_menu.add(titre);
+        text.setBackground(new Color(0, 0, 0, 175)); 
+        text.setBounds(100, 100, this.getWidth() - 500, 500);       
+        text.setOpaque(true);
+        
+        pan_menu.add(text);  
         
     }      
 

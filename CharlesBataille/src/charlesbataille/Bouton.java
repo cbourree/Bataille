@@ -10,8 +10,6 @@ package charlesbataille;
  * @author François
  */
 import java.awt.Color;
-import java.awt.Font;
-import java.awt.FontMetrics;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -46,6 +44,7 @@ public class Bouton extends JButton implements MouseListener{
         this.addMouseListener(this);
     }
        
+    @Override
     public void paintComponent(Graphics g) {
         Graphics2D g2d = (Graphics2D)g;
         g2d.drawImage(img, 0, 0, this.getWidth(), this.getHeight(), this);
@@ -54,11 +53,13 @@ public class Bouton extends JButton implements MouseListener{
     }
     
       //Méthode appelée lors du clic de souris
+    @Override
     public void mouseClicked(MouseEvent event) {
         System.out.print("Salut");
     }
 
     //Méthode appelée lors du survol de la souris
+    @Override
     public void mouseEntered(MouseEvent event) {
         //Nous changeons le fond de notre image pour le orange lorsque nous relâchons le clic, avec le fichier fondBoutonHover.png
         try {
@@ -66,11 +67,11 @@ public class Bouton extends JButton implements MouseListener{
         } catch (IOException e) {
             e.printStackTrace();
         }  
-         System.out.print("Bonjour !!!");
     }
 
   //Méthode appelée lorsque la souris sort de la zone du bouton
     
+    @Override
   public void mouseExited(MouseEvent event) { 
     try {
         img = ImageIO.read(new File("jouer_survol.png"));
@@ -88,6 +89,7 @@ public class Bouton extends JButton implements MouseListener{
     } catch (IOException e) {
         e.printStackTrace();
     }
+    System.out.print("Quitter !!!2");
   }
 
     @Override
